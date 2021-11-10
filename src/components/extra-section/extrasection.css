@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.mini_title_benner2nd{
+    font-family: 'Dancing Script', cursive;
+    color: coral;
+}
+
+.banner_rotate{
+    transition: all .4s linear;
+}
+
+.banner_rotate:hover{
+    transform: rotateY(180deg);
+}
+
+.img_box{
+    overflow: hidden;
+}
+
+.banner_2nd_img{
+    transform: scale(1);
+    transition: all .6s linear;
+}
+
+.banner_2nd_img:hover{
+    transform: scale(1.2);
+}

@@ -1,0 +1,11 @@
+.forget_text , .sign_up{
+    border: none;
+    background: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.log_input{
+    padding: 8px 10px;
+    border-radius: 20px;
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script&family=Open+Sans:ital,wght@1,500&family=Public+Sans:wght@500;570&family=Roboto:ital@1&display=swap');
+
+.login_btn{
+    padding: 7px 12px;
+    outline: none;
+    border-radius: 7px;
+    color: rgb(26, 128, 212);
+    border: 2px solid rgb(26, 128, 212);
+    position: relative;
+    transition: all .4s linear;
+}
+
+.login_btn:hover{
+    background: rgb(26, 128, 212);
+    color: white;
+}
+
+.nav_list{
+    font-size: 15px;
+}
+
+.nav_list::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    display: block;
+    background: rgba(0, 0, 0, 0.74);
+    transition: all .4s ease-in;
+}
+
+.nav_list:hover::after{
+    width: 100%;
+}
+
+.profile_photo{
+    width: 50px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link:hover{
+    color: rgb(69, 164, 241);
+}
+
+.dropdown_menu_bg{
+    background: linear-gradient(rgb(82,204,241),rgb(152, 225, 247),rgb(82, 204, 241));
+}
+
+.robbo_font{
+    font-family: 'Lato', sans-serif;
+}
+
+.robbo_font:checked{
+    text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.about_header{
+    background: linear-gradient(rgb(248, 142, 109),#fff);
+}
+
+.mini_title{
+    color: rgb(233, 66, 48);
+}
+
+.main_about_part{
+    background: linear-gradient(#fff,rgb(255, 216, 216));
+}

@@ -1,0 +1,32 @@
+.service_mini_title{
+    font-family: 'Public Sans', sans-serif;
+    color: coral;
+    font-size: 20px;
+}
+
+.service_title{
+    font-family: 'Public Sans', sans-serif;
+}
+
+.service_img_box{
+    overflow: hidden;
+}
+
+.services_images{
+    width: 100%;
+    height: 200px;
+    transform: scale(1);
+    transition: all .3s linear;
+}
+
+.services_images:hover{
+    transform: scale(1.1);
+}
+
+.service_status{
+    font-family: 'Public Sans', sans-serif;
+    text-transform: capitalize;
+    border: 1px solid coral;
+    padding: 5px 8px ;
+    border-radius: 10px;
+}

@@ -1,0 +1,24 @@
+.footer_image{
+    width: 150px;
+    height: 50px;
+}
+
+.social_icon{
+    font-size: 16px;
+    color: white;
+    transition: all .2s linear;
+}
+.social_icon:hover{
+    color: rgb(42, 132, 235);
+    border-radius: 5px;
+}
+
+.useful_list{
+    color: whtie;
+    transition: all .2s linear;
+}
+
+.useful_list:hover{
+    color: rgb(201, 46, 46);
+    margin-left: 10px;
+}
