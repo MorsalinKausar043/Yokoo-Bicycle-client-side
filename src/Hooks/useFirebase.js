@@ -9,21 +9,36 @@ const useFirebase = () => {
     const auth = getAuth();
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const [admin, setAdmin] = useState(false)
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
     // google login ------------------->
 
-    const SigninGoogle = () => {
-        setIsLoading(false);
-        return signInWithPopup(auth, googleProvider)
+    const SigninGoogle = ( history , redirect_location , setError) => {
+        setIsLoading(true)
+        signInWithPopup(auth, googleProvider)
+        .then((result) => {
+            const user = result.user;
+            saveUser(user.email, user.displayName, "PUT");
+            history.push(redirect_location);
+        }).catch(() => setError("something Wrong"))
+        .finally(() => setIsLoading(false));
+        setError("");
     }
 
     // github login -------------------->
 
-    const SigninGithub = () => {
-        setIsLoading(false);
-       return signInWithPopup(auth, githubProvider)
+    const SigninGithub = (history , redirect_location , setError) => {
+        setIsLoading(true);
+        signInWithPopup(auth, githubProvider)
+        .then((result) => {
+            const user = result.user;
+            saveUser(user.email, user.displayName, "PUT");
+            history.push(redirect_location);
+        }).catch(() => setError("something Wrong"))
+        .finally(() => setIsLoading(false));
+        setError("");
     }
 
     // deploy_displayName ---------------->
@@ -47,6 +62,14 @@ const useFirebase = () => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    // search admin ----------------------->
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+            }, [user.email]);
+
     // observer user state ------------------->
     
     useEffect(() => {
@@ -61,8 +84,23 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, [auth])
     
+    // user logout state set ---------------->
+
     const logOut = () => {
         return signOut(auth)
+    }
+
+    // datebase post on register user --------------------------->
+
+    const saveUser = (email, displayName , method) => {
+        const user = { email, displayName };
+        fetch("http://localhost:5000/users", {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        }).then()
     }
 
     return {
@@ -76,7 +114,9 @@ const useFirebase = () => {
         deploy_displayName,
         isLoading,
         setIsLoading,
-        logInEmailAndPassword
+        logInEmailAndPassword,
+        saveUser,
+        admin
     }
 };
 

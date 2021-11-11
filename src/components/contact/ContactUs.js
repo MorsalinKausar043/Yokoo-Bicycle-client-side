@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from "../footer/Footer";
+import Navbar from "../navbar/Navbar";
 import "./contact.css";
 
 const ContactUs = () => {
@@ -7,6 +9,7 @@ const ContactUs = () => {
 
     return (
         <>
+            <Navbar/>
             <div className="row">
                 <div className="col">
                     <div className="contact_header p-1 py-md-3 px-md-5">
@@ -59,6 +62,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

@@ -9,7 +9,7 @@ import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
 
-    const { SigninGoogle, SigninGithub, logInEmailAndPassword , setIsLoading } = useAuth();
+    const { SigninGoogle, saveUser , user, SigninGithub, logInEmailAndPassword , setIsLoading } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const [email,setEmail] = useState("");
@@ -37,21 +37,11 @@ const Login = () => {
     }
 
     const googleSingIn = () => {
-        SigninGoogle()
-            .then(() => {
-                history.push(redirect_location);
-            }).catch(() => setError("something Wrong"))
-            .finally(() => setIsLoading(false));
-        setError("");
+        SigninGoogle(history, redirect_location, setError);
     };
 
     const githubSignIn = () => {
-        SigninGithub()
-            .then(() => {
-                history.push(redirect_location)
-            }).catch(() => setError("something Wrong"))
-            .finally(() => setIsLoading(false));
-            setError("");
+        SigninGithub(history, redirect_location, setError);
     };
 
     const emailBox = (e) => setEmail(e.target.value);

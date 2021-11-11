@@ -1,12 +1,15 @@
 import { useParams } from "react-router";
 import useProductApi from "../../Hooks/useProductApi";
 import SingleDetails from "./SingleDetails";
+import Footer from "../footer/Footer";
+import Navbar from "../navbar/Navbar";
 
 const PlaceOrder = () => {
     const { _id } = useParams();
     const { productData , isLoading } = useProductApi();
     return (
         <>
+            <Navbar/>
             <div className="container py-5">
                 <div className="row">
                     {
@@ -25,6 +28,7 @@ const PlaceOrder = () => {
                     }
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

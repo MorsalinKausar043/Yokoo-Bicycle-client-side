@@ -7,7 +7,7 @@ import { BiLogIn, BiUserCircle } from 'react-icons/bi';
 import useAuth from "../../Hooks/useAuth";
 
 const SignUp = () => {
-    const { SigninGoogle, SigninGithub, SignupEmailAndPassword , deploy_displayName , setUser , setIsLoading  } = useAuth();
+    const { SigninGoogle,user , saveUser , SigninGithub, SignupEmailAndPassword , deploy_displayName , setUser , setIsLoading  } = useAuth();
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
@@ -33,6 +33,7 @@ const SignUp = () => {
                     .then(() => {
                         history.push("/");
                         deploy_displayName(name);
+                        saveUser(email, name, 'POST');
                         setUser({ email, displayName: name })
                     }).catch((error) => setError("something wrong!"))
                     .finally(() => setIsLoading(false));
@@ -53,21 +54,11 @@ const SignUp = () => {
     const CpasswordBox = (e) => setCPassword(e.target.value);
 
     const googleSingIn = () => {
-        SigninGoogle()
-            .then(() => {
-                history.push(redirect_location);
-            }).catch(() => setError("something Wrong"))
-            .finally(() => setIsLoading(false));
-            setError("");
+        SigninGoogle( history , redirect_location , setError)
     };
 
     const githubSignIn = () => {
-        SigninGithub()
-            .then(() => {
-                history.push(redirect_location)
-            }).catch(() => setError("something Wrong"))
-            .finally(() => setIsLoading(false));
-            setError("");
+        SigninGithub(history, redirect_location, setError);
     };
 
     return (

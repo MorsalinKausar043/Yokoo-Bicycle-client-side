@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ExtraSection from '../extra-section/ExtraSection';
 import Reviews from '../inputReviews/Reviews';
+import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
 import ProductDatas from "./ProductDatas";
 import "./home.css";
 
@@ -15,6 +17,7 @@ const Home = () => {
 
     return (
         <>
+            <Navbar/>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
@@ -70,7 +73,8 @@ const Home = () => {
             </div>
 
             <ExtraSection />
-            <Reviews/>
+            <Reviews />
+            <Footer/>
         </>
     );
 };

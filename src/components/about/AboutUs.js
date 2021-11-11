@@ -1,11 +1,14 @@
 import React from 'react';
+import Footer from "../footer/Footer";
+import Navbar from "../navbar/Navbar";
 import "./about.css";
 
 const AboutUs = () => {
     const about_image = "https://i.ibb.co/nbzL9Kj/bicycle-realistic-fitness-sport-road-race-carbon-bike-detailed-pictures-chains-rudder-pedals-tires-t.jpg";
     return (
-        <>    
-            <div className="row">
+        <>
+            <Navbar/>    
+            <div className="row ">
                 <div className="col">
                     <div className="about_header p-1 py-md-3 px-md-5">
                         <h1><span className="text-danger fw-bold">A</span>bout <span className="text-danger fw-bold">U</span>s</h1>
@@ -13,7 +16,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="main_about_part">
+            <div className="main_about_part pb-5">
                 <div className="container pb-5 pt-3">
                     <div className="row">
                         <div className="col-10 mx-auto col-md-6 order-2 order-md-1 d-flex flex-column justify-content-center">
@@ -30,6 +33,7 @@ const AboutUs = () => {
                     </div>
                 </div>    
             </div>
+            <Footer/>
         </>
     );
 };

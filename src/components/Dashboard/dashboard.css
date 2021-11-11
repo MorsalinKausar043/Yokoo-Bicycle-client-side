@@ -1,0 +1,22 @@
+.dashboard_btn{
+    text-decoration: none;
+    color: black;
+    margin-top: 7px;
+}
+
+.dashboard_btn::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    display: block;
+    background: rgba(0, 0, 0, 0.74);
+    transition: all .4s ease-in;
+}
+.dashboard_btn:hover::after{
+    width: 30%;
+}
+
+.dashboard_btn:hover{
+    color: black;
+}

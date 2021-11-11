@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import useProductApi from '../../Hooks/useProductApi';
+import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
 import "./explore.css";
 
 
@@ -9,6 +11,7 @@ const Explore = () => {
     const { isLoading, productData } = useProductApi();
     return (
         <>
+            <Navbar/>
             {
             isLoading ?
             <div className="col-10 mx-auto col-md-4 text-center py-5">
@@ -43,7 +46,7 @@ const Explore = () => {
                 </div>
             </div>
         }
-            
+            <Footer/>
         </>
     );
 };

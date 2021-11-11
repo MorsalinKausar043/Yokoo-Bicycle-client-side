@@ -1,0 +1,7 @@
+.dashboard_profile_image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4),
+                -1px -1px 1px 1px rgba(0,0,0,0.4);
+}

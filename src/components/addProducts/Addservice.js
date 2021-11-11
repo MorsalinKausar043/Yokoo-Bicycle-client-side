@@ -24,7 +24,7 @@ const Addservice = () => {
         
         if (title && body && src && price)
         {
-            data.status = "panding";
+            data.status = "pending";
             axios.post('http://localhost:5000/addProduct', data)
             .then(res => {
                 if (res.data.insertedId)
