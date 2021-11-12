@@ -17,8 +17,8 @@ const Reviews2 = () => {
         <>
             <div className="container">
                 <h2 className="text-center">
-                    <span className="fw-bold text-danger h1">C</span>ustomer
-                    <span className="fw-bold text-danger h1">R</span>eview
+                    <span className="fw-bold text-danger h1">C</span>ustomer 
+                    <span className="fw-bold text-danger h1"> R</span>eview
                 </h2>
                 <div className="row row-cols-1 py-3 row-cols-md-3 g-4">
                     {
