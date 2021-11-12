@@ -39,7 +39,7 @@ const Reviews = () => {
             reviewData.src = user.photoURL;
             reviewData.Rating = rating;
             console.log(reviewData)
-            fetch('http://localhost:5000/review', {
+            fetch('https://still-woodland-71864.herokuapp.com/review', {
                 headers: {
                   'Content-Type': 'application/json'
                 },

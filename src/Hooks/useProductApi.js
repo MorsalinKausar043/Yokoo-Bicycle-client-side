@@ -5,7 +5,7 @@ const useProductApi = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/product")
+        fetch("https://still-woodland-71864.herokuapp.com/product")
             .then(res => res.json())
             .then((data) => {
                 setProductData(data)

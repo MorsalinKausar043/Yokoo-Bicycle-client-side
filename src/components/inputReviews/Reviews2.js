@@ -5,7 +5,7 @@ const Reviews2 = () => {
 
     const [showReviews, setShowReviews] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/review")
+        fetch("https://still-woodland-71864.herokuapp.com/review")
             .then(res => res.json())
             .then(data => setShowReviews(data));
     }

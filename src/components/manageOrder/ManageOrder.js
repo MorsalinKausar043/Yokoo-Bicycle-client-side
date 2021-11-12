@@ -9,7 +9,7 @@ const ManageOrder = () => {
     const [showCart, setShowCart] = useState([]);
 
     useEffect(() =>
-        fetch("http://localhost:5000/singleProduct")
+        fetch("https://still-woodland-71864.herokuapp.com/singleProduct")
             .then(res => res.json())
             .then((data) => setShowCart(data))
         , []);
@@ -18,7 +18,7 @@ const ManageOrder = () => {
             const deletes = window.confirm("Do You Delete This Packages?");
             if (deletes)
             {
-                const url = `http://localhost:5000/singleProduct/${id}`;
+                const url = `https://still-woodland-71864.herokuapp.com/singleProduct/${id}`;
                 fetch(url, {
                     method: 'DELETE'
                 })
