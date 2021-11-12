@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const MakeAdmin = () => {
 
-    const [email, setEmail] = useState("")
+    const [email, setEmail] = useState("");
 
     const inputBox = e => setEmail(e.target.value);
     const updateUserToAdmin = (e) => {

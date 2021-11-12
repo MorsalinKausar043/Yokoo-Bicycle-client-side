@@ -5,9 +5,10 @@ import { FcGoogle } from 'react-icons/fc';
 import { GoMarkGithub } from 'react-icons/go';
 import { BiLogIn, BiUserCircle } from 'react-icons/bi';
 import useAuth from "../../Hooks/useAuth";
+import Navbar from '../navbar/Navbar';
 
 const SignUp = () => {
-    const { SigninGoogle,user , saveUser , SigninGithub, SignupEmailAndPassword , deploy_displayName , setUser , setIsLoading  } = useAuth();
+    const { SigninGoogle , saveUser , SigninGithub, SignupEmailAndPassword , deploy_displayName , setUser , setIsLoading  } = useAuth();
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
@@ -63,7 +64,8 @@ const SignUp = () => {
 
     return (
         <>
-            <div className="container py-5">
+            <Navbar/>
+            <div className="container py-3">
                 <div className="row d-flex justify-content-center align-items-center">
                     <div className="col-10 mx-auto col-md-4 shadow p-3 rounded">
                         <h3 className=" display-3 mb-2 text-primary text-center"><BiUserCircle /></h3>

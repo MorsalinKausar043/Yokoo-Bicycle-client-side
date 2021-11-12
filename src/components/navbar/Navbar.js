@@ -15,8 +15,6 @@ const Navbar = () => {
         .then(() => history.push("/"))  
     }
 
-    const y = "admin";
-
     return (
         <>
             <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-light">

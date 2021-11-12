@@ -22,6 +22,7 @@ import ManageOrder from '../manageOrder/ManageOrder';
 import Pay from '../pay/Pay';
 import Myorder from '../myorder/Myorder';
 import Reviews from "../reviews/Reviews";
+import AdminRoute from "../../privateRoute/AdminRoute";
 import useAuth from '../../Hooks/useAuth';
 
 const drawerWidth = 200;
@@ -54,7 +55,7 @@ const Dashboard = (props) => {
             </NavLink>
         {
           admin ?
-            <div>
+            <Box>
               <NavLink className="dashboard_btn mt-3" to={`${url}/makeadmin`}>
               Make Admin
             </NavLink>
@@ -67,9 +68,9 @@ const Dashboard = (props) => {
             <NavLink className="dashboard_btn mt-3" to={`${url}/manageallorder`}>
                 Manage All Product
             </NavLink>
-          </div>
+          </Box>
             :
-          <div>
+          <Box>
               <NavLink className="dashboard_btn mt-3" to={`${url}/pay`}>
                 Pay
             </NavLink>
@@ -79,7 +80,7 @@ const Dashboard = (props) => {
             <NavLink className="dashboard_btn mt-3" to={`${url}/review`}>
                 Review
             </NavLink>
-          </div>
+          </Box>
         }
         {
           user.email || user.displayName ?
@@ -161,18 +162,18 @@ const Dashboard = (props) => {
                     <Route exact path={path}>
                       <DashboardHome/>
                     </Route>
-                    <PrivateRoute path={`${path}/addservice`}>
+                    <AdminRoute path={`${path}/addservice`}>
                         <Addservice/>
-                    </PrivateRoute>
-                    <PrivateRoute path={`${path}/makeadmin`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/makeadmin`}>
                         <MakeAdmin/>
-                    </PrivateRoute>
-                    <PrivateRoute path={`${path}/manageallorder`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageallorder`}>
                         <ManageAllOrder/>
-                    </PrivateRoute>
-                    <PrivateRoute path={`${path}/manageorder`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageorder`}>
                         <ManageOrder/>
-                    </PrivateRoute>
+                    </AdminRoute>
                     <PrivateRoute path={`${path}/pay`}>
                         <Pay/>
                     </PrivateRoute>

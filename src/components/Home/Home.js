@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ExtraSection from '../extra-section/ExtraSection';
-import Reviews from '../inputReviews/Reviews';
+import Reviews2 from '../inputReviews/Reviews2';
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import ProductDatas from "./ProductDatas";
@@ -73,7 +73,7 @@ const Home = () => {
             </div>
 
             <ExtraSection />
-            <Reviews />
+            <Reviews2 />
             <Footer/>
         </>
     );

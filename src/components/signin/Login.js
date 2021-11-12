@@ -3,13 +3,14 @@ import { NavLink } from 'react-router-dom';
 import { useHistory, useLocation } from "react-router";
 import { FcGoogle } from 'react-icons/fc';
 import { GoMarkGithub } from 'react-icons/go';
-import { BiLogIn , BiUserCircle } from 'react-icons/bi';
+import { BiLogIn, BiUserCircle } from 'react-icons/bi';
+import Navbar from "../navbar/Navbar";
 import "./login.css";
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
 
-    const { SigninGoogle, saveUser , user, SigninGithub, logInEmailAndPassword , setIsLoading } = useAuth();
+    const { SigninGoogle, SigninGithub, logInEmailAndPassword , setIsLoading } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const [email,setEmail] = useState("");
@@ -50,6 +51,7 @@ const Login = () => {
 
     return (
         <>
+            <Navbar/>
             <div className="container py-5">
                 <div className="row d-flex justify-content-center align-items-center">
                     <div className="col-10 mx-auto col-md-4 shadow p-3 rounded">
