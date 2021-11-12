@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Rating from '@mui/material/Rating';
-import Stack from '@mui/material/Stack';
 import "./review.css";
 
 const Reviews2 = () => {
