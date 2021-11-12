@@ -20,14 +20,14 @@ const Reviews2 = () => {
                     <span className="fw-bold text-danger h1">C</span>ustomer
                     <span className="fw-bold text-danger h1">R</span>eview
                 </h2>
-                <div className="row row-cols-1 row-cols-md-3 g-4">
+                <div className="row row-cols-1 py-3 row-cols-md-3 g-4">
                     {
                         showReviews.map(crrElm => {
                             console.log(crrElm);
                             const { name, email, des, src, Rating } = crrElm;
                             const ratings = parseInt(Rating);
                             return (
-                                <div class="col py-5">
+                                <div class="col py-3">
                                     <div class="card text-center py-3 border-0 shadow">
                                         <div>
                                             <img src={src ? src : static_img} class="review_img" alt="..."/>
