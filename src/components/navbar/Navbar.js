@@ -46,16 +46,16 @@ const Navbar = () => {
                                 
                                 <div className="d-md-flex align-items-center">
                                     <div>
-                                        <NavLink className="text-primary" to="/dashboard">Dashboard</NavLink>
+                                        <NavLink className="btn btn-outline-secondary" to="/dashboard">Dashboard</NavLink>
                                     </div>
                                 
                                     <div className="mt-3 mt-md-0 d-none d-md-block">
-                                        <button className="login_btn ms-md-4" onClick={LogOut}>Log Out</button>
+                                        <button className="ms-md-4 btn btn-outline-secondary" onClick={LogOut}>Log Out</button>
                                     </div>
                                 </div>
                                     :
                                 <Link to="/signin">
-                                    <button className="login_btn">Sign In</button>
+                                    <button className="btn btn-outline-secondary">Sign In</button>
                                 </Link>
                                 
                                     
