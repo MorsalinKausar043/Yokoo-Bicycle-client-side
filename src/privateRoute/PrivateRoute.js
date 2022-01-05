@@ -3,8 +3,9 @@ import { Redirect, Route } from 'react-router';
 import useAuth from '../Hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user , isLoading } = useAuth();
-    if (isLoading)
+    const { user, isLoading } = useAuth();
+    const token = sessionStorage.getItem('idToken');
+    if (isLoading && !token)
     {
         return (
             <div className="container">

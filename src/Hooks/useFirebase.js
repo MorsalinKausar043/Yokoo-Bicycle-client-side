@@ -1,5 +1,5 @@
 import {useState , useEffect} from 'react';
-import { getAuth , GoogleAuthProvider , signInWithPopup , createUserWithEmailAndPassword  , signOut , onAuthStateChanged , GithubAuthProvider , updateProfile ,signInWithEmailAndPassword  } from "firebase/auth";
+import { getAuth , GoogleAuthProvider , signInWithPopup , createUserWithEmailAndPassword  , signOut , onAuthStateChanged , GithubAuthProvider , updateProfile ,signInWithEmailAndPassword, getIdToken  } from "firebase/auth";
 import firebaseAuthentication from "../firebase/firebase.init";
 
 firebaseAuthentication();
@@ -74,7 +74,10 @@ const useFirebase = () => {
     
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
-            if (user) {
+            if (user)
+            {
+                getIdToken(user)
+                .then(idToken => localStorage.setItem('idToken', idToken));
                 setUser(user);
             } else {
                 setUser({})
