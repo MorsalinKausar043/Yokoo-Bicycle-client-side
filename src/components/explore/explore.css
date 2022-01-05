@@ -8,6 +8,10 @@
     font-family: 'Public Sans', sans-serif;
 }
 
+.service_text{
+    font-family: Poppins;
+}
+
 .service_img_box{
     overflow: hidden;
 }
