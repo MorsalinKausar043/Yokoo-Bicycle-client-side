@@ -8,7 +8,7 @@ const MakeAdmin = () => {
     const updateUserToAdmin = (e) => {
         e.preventDefault();
         const user = { email };
-        fetch('https://still-woodland-71864.herokuapp.com/users/admin', {
+        fetch('https://yokoo-bicycle-server-side-production.up.railway.app/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -39,7 +39,7 @@ const Reviews = () => {
             reviewData.src = user.photoURL;
             reviewData.Rating = rating;
             console.log(reviewData)
-            fetch('https://still-woodland-71864.herokuapp.com/review', {
+            fetch('https://yokoo-bicycle-server-side-production.up.railway.app/review', {
                 headers: {
                   'Content-Type': 'application/json'
                 },

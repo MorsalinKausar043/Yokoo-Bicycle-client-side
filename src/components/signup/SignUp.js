@@ -6,6 +6,7 @@ import { GoMarkGithub } from 'react-icons/go';
 import { BiLogIn, BiUserCircle } from 'react-icons/bi';
 import useAuth from "../../Hooks/useAuth";
 import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 
 const SignUp = () => {
     const { SigninGoogle , saveUser , SigninGithub, SignupEmailAndPassword , deploy_displayName , setUser , setIsLoading  } = useAuth();
@@ -95,6 +96,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

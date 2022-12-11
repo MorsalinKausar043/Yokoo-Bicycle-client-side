@@ -25,7 +25,7 @@ const Addservice = () => {
         if (title && body && src && price)
         {
             data.status = "pending";
-            axios.post('https://still-woodland-71864.herokuapp.com/addProduct', data)
+            axios.post('https://yokoo-bicycle-server-side-production.up.railway.app/addProduct', data)
             .then(res => {
                 if (res.data.insertedId)
                 {

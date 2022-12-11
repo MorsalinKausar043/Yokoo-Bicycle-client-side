@@ -5,7 +5,7 @@ const Reviews2 = () => {
 
     const [showReviews, setShowReviews] = useState([]);
     useEffect(() => {
-        fetch("https://still-woodland-71864.herokuapp.com/review")
+        fetch("https://yokoo-bicycle-server-side-production.up.railway.app/review")
             .then(res => res.json())
             .then(data => setShowReviews(data));
     }

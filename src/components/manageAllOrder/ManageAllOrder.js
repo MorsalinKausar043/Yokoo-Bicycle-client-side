@@ -10,7 +10,7 @@ const ManageAllOrder = () => {
     const status = "shipped";
 
     useEffect(() =>
-        fetch("https://still-woodland-71864.herokuapp.com/singleProduct")
+        fetch("https://yokoo-bicycle-server-side-production.up.railway.app/singleProduct")
             .then(res => res.json())
             .then((data) => setShowProduct(data))
         , []);
@@ -19,7 +19,7 @@ const ManageAllOrder = () => {
             const deletes = window.confirm("Do You Delete This Packages?");
             if (deletes)
             {
-                const url = `https://still-woodland-71864.herokuapp.com/singleProduct/${id}`;
+                const url = `https://yokoo-bicycle-server-side-production.up.railway.app/singleProduct/${id}`;
                 fetch(url, {
                     method: 'DELETE'
                 })
@@ -37,7 +37,7 @@ const ManageAllOrder = () => {
         const confirmApproved = window.confirm("Do You Approved this Package!");
         if (confirmApproved)
         {
-            const url = `https://still-woodland-71864.herokuapp.com/singleProduct/${id}`;
+            const url = `https://yokoo-bicycle-server-side-production.up.railway.app/singleProduct/${id}`;
             fetch(url, {
                 method: "PUT",
                 headers: {

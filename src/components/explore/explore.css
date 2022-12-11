@@ -18,7 +18,7 @@
 
 .services_images{
     width: 100%;
-    height: 200px;
+    height: 250px;
     transform: scale(1);
     transition: all .3s linear;
 }

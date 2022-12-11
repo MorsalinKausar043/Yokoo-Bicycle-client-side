@@ -43,7 +43,7 @@ const SingleDetails = ({ _id, title, body, src, status , price }) => {
             cycleData.body = body;
             cycleData.src = src;
             cycleData.status = status;
-            axios.post('https://still-woodland-71864.herokuapp.com/singleProduct', cycleData)
+            axios.post('https://yokoo-bicycle-server-side-production.up.railway.app/singleProduct', cycleData)
             .then(res => {
                 if (res.data.insertedId)
                 {

@@ -7,6 +7,7 @@ import { BiLogIn, BiUserCircle } from 'react-icons/bi';
 import Navbar from "../navbar/Navbar";
 import "./login.css";
 import useAuth from "../../Hooks/useAuth";
+import Footer from "../footer/Footer";
 
 const Login = () => {
 
@@ -80,6 +81,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };
